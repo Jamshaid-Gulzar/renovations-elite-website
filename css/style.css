@@ -1398,7 +1398,7 @@ p {
 
 /* Exclusion banner */
 .exclusion {
-  background: var(--gold-100);
+  background: transparent;
   border: 1px solid rgba(211, 162, 74, 0.45);
   border-left: 4px solid var(--gold);
   border-radius: var(--radius);
@@ -1407,13 +1407,11 @@ p {
   gap: 14px;
   align-items: flex-start;
   font-size: 0.98rem;
-  box-shadow: var(--shadow-sm);
   transition: transform var(--t-med), box-shadow var(--t-med), border-color var(--t-med);
 }
 
 .exclusion:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-md);
   border-color: var(--gold);
 }
 
