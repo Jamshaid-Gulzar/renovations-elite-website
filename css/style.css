@@ -2140,14 +2140,12 @@ td strong {
 
 .map-dot .map-tip {
   opacity: 0;
-  transform: translateY(5px);
-  transition: opacity 0.15s ease, transform 0.15s ease;
+  transition: opacity 0.15s ease;
   pointer-events: none;
 }
 
 .map-dot:hover .map-tip {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .map-dot:hover > circle {
