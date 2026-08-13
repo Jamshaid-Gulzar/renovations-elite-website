@@ -1019,6 +1019,85 @@ p {
   font-size: 1.05rem;
 }
 
+.page-hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.page-hero__media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(211, 162, 74, 0.25);
+  background: linear-gradient(160deg, var(--charcoal-800) 0%, var(--charcoal-900) 100%);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  min-height: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.page-hero__media::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(211, 162, 74, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(211, 162, 74, 0.09) 1px, transparent 1px);
+  background-size: 26px 26px;
+}
+
+.page-hero__media:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(211, 162, 74, 0.4);
+}
+
+.page-hero__icon {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  background: rgba(211, 162, 74, 0.12);
+  border: 1px solid rgba(211, 162, 74, 0.35);
+  color: var(--gold);
+  transition: transform var(--t-med), background var(--t-med);
+}
+
+.page-hero__media:hover .page-hero__icon {
+  transform: scale(1.08) rotate(-5deg);
+  background: rgba(49, 91, 109, 0.45);
+}
+
+.page-hero__icon svg {
+  width: 42px;
+  height: 42px;
+}
+
+.page-hero__cap {
+  position: relative;
+}
+
+.page-hero__cap strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--warm-white);
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.page-hero__cap small {
+  color: rgba(250, 248, 244, 0.6);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
 /* Breadcrumb */
 .breadcrumb {
   display: flex;
@@ -2115,6 +2194,8 @@ td strong {
 }
 
 @media (max-width: 920px) {
+  .page-hero__grid { grid-template-columns: 1fr; }
+  .page-hero__media { min-height: 260px; }
   .hero__grid { grid-template-columns: 1fr; }
   .hero__frame { min-height: 320px; }
   .two-col { grid-template-columns: 1fr; }
