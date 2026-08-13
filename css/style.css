@@ -1398,14 +1398,15 @@ p {
 
 /* Exclusion banner */
 .exclusion {
-  background: rgba(23, 33, 43, 0.05);
-  border: 1px dashed rgba(49, 91, 109, 0.35);
+  background: var(--warm-white);
+  border: 1px solid rgba(49, 91, 109, 0.3);
   border-radius: var(--radius);
   padding: 18px 22px;
   display: flex;
   gap: 14px;
   align-items: flex-start;
   font-size: 0.98rem;
+  box-shadow: var(--shadow-sm);
   transition: transform var(--t-med), box-shadow var(--t-med), border-color var(--t-med);
 }
 
