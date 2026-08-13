@@ -2026,16 +2026,28 @@ td strong {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 1180px) {
   .main-nav { display: none; }
   .nav-toggle { display: flex; }
   .mobile-nav { display: block; }
+}
+
+@media (max-width: 920px) {
   .hero__grid { grid-template-columns: 1fr; }
   .hero__frame { min-height: 320px; }
   .two-col { grid-template-columns: 1fr; }
   .two-col .media { order: -1; }
   .service-row { grid-template-columns: 1fr; gap: 12px; }
   .grid-3 { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .nav-wrap { gap: 12px; }
+  .logo { gap: 10px; }
+  .logo__mark { width: 42px; height: 42px; }
+  .logo__mark span { font-size: 1.05rem; }
+  .logo__name { font-size: 0.95rem; }
+  .logo__tag { display: none; }
 }
 
 @media (max-width: 640px) {
