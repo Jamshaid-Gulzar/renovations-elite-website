@@ -1327,6 +1327,13 @@ p {
   gap: 14px;
   align-items: flex-start;
   font-size: 0.98rem;
+  transition: transform var(--t-med), box-shadow var(--t-med), border-color var(--t-med);
+}
+
+.exclusion:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(211, 162, 74, 0.55);
 }
 
 .exclusion svg {
@@ -2034,6 +2041,10 @@ td strong {
 .cta-band .container {
   position: relative;
   z-index: 2;
+}
+
+.cta-band .btn-group {
+  margin-top: 34px;
 }
 
 .cta-band h2 {
