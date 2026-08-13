@@ -2099,6 +2099,36 @@ td strong {
   backdrop-filter: blur(4px);
 }
 
+/* Service-area map card */
+.map-card {
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(23, 33, 43, 0.12);
+  box-shadow: var(--shadow-lg);
+  background: var(--warm-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.map-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(211, 162, 74, 0.35);
+}
+
+.map-card__svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.map-card .map-card__label {
+  background: rgba(16, 24, 32, 0.9);
+  color: rgba(250, 248, 244, 0.85);
+  font-size: 0.82rem;
+  padding: 12px 18px;
+}
+
 /* CTA band */
 .cta-band {
   background: var(--charcoal);

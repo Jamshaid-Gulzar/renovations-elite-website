@@ -112,9 +112,63 @@
             <a class="btn btn--secondary" href="/contact/">Contact Us to Confirm Coverage</a>
           </div>
         </div>
-        <div class="media reveal reveal-delay-1">
-          <svg aria-hidden="true"><use href="#i-pin"/></svg>
-          <span class="media__label">Charlotte Metro and surrounding communities</span>
+        <div class="map-card reveal reveal-delay-1">
+          <svg class="map-card__svg" viewBox="0 0 600 460" role="img" aria-label="Service area map centered on Charlotte Metro">
+            <defs>
+              <radialGradient id="re-map-glow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#315b6d" stop-opacity="0.2"/>
+                <stop offset="55%" stop-color="#315b6d" stop-opacity="0.08"/>
+                <stop offset="100%" stop-color="#315b6d" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+            <rect width="600" height="460" fill="#e9eef1"/>
+            <g stroke="#ffffff" stroke-width="1" opacity="0.55">
+              <path d="M40 0V460M80 0V460M120 0V460M160 0V460M200 0V460M240 0V460M280 0V460M320 0V460M360 0V460M400 0V460M440 0V460M480 0V460M520 0V460M560 0V460"/>
+              <path d="M0 40H600M0 80H600M0 120H600M0 160H600M0 200H600M0 240H600M0 280H600M0 320H600M0 360H600M0 400H600M0 440H600"/>
+            </g>
+            <circle cx="300" cy="240" r="200" fill="url(#re-map-glow)"/>
+            <g fill="none" stroke="#315b6d">
+              <circle cx="300" cy="240" r="120" stroke-width="2" stroke-dasharray="6 8" opacity="0.45"/>
+              <circle cx="300" cy="240" r="185" stroke-width="2" stroke-dasharray="6 8" opacity="0.28"/>
+            </g>
+            <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round">
+              <path d="M0 330 C 150 300, 260 360, 600 250"/>
+              <path d="M150 460 C 180 320, 160 200, 120 0"/>
+              <path d="M450 0 C 420 140, 520 260, 600 300"/>
+            </g>
+            <g fill="none" stroke="#315b6d" stroke-width="1.5" opacity="0.5">
+              <path d="M0 330 C 150 300, 260 360, 600 250"/>
+              <path d="M150 460 C 180 320, 160 200, 120 0"/>
+              <path d="M450 0 C 420 140, 520 260, 600 300"/>
+            </g>
+            <g fill="#315b6d" opacity="0.8">
+              <circle cx="185" cy="150" r="6"/>
+              <circle cx="470" cy="320" r="6"/>
+              <circle cx="300" cy="420" r="5"/>
+            </g>
+            <g fill="#d3a24a">
+              <circle cx="420" cy="120" r="5"/>
+              <circle cx="140" cy="330" r="5"/>
+            </g>
+            <g fill="#5b6873">
+              <circle cx="300" cy="70" r="4"/>
+              <circle cx="80" cy="220" r="4"/>
+              <circle cx="520" cy="190" r="4"/>
+              <circle cx="240" cy="120" r="4"/>
+              <circle cx="380" cy="380" r="4"/>
+            </g>
+            <circle cx="300" cy="240" r="16" fill="#d3a24a"/>
+            <circle cx="300" cy="240" r="16" fill="none" stroke="#17212b" stroke-width="2"/>
+            <circle cx="300" cy="240" r="6" fill="#17212b"/>
+            <text x="300" y="286" text-anchor="middle" font-family="Manrope, Arial" font-size="15" font-weight="700" fill="#17212b" letter-spacing="0.02em">CHARLOTTE</text>
+            <text x="300" y="304" text-anchor="middle" font-family="Inter, Arial" font-size="11" fill="#5b6873" letter-spacing="0.04em">METRO AREA</text>
+            <g transform="translate(548, 44)">
+              <circle r="16" fill="#ffffff" stroke="#315b6d" stroke-width="1.5"/>
+              <path d="M0 -9 L3 4 L0 1.5 L-3 4 Z" fill="#d3a24a"/>
+              <text y="-21" text-anchor="middle" font-family="Inter, Arial" font-size="11" font-weight="700" fill="#315b6d">N</text>
+            </g>
+          </svg>
+          <span class="map-card__label">Charlotte Metro &amp; surrounding communities &mdash; coverage confirmed per project. No fixed service boundary.</span>
         </div>
       </div>
     </section>
