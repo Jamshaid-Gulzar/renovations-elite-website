@@ -1,0 +1,11 @@
+# Ignore the vendor manual (internal document, not for public repo)
+Renovations_Elite_Multi_Page_Website_Vendor_Manual.pdf
+*.pdf
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Vercel
+.vercel
