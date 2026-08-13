@@ -544,10 +544,10 @@ p {
 .nav-link {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 10px 13px;
+  gap: 5px;
+  padding: 10px 11px;
   font-family: var(--font-heading);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: rgba(250, 248, 244, 0.85);
   border-radius: 8px;
@@ -637,8 +637,8 @@ p {
 }
 
 .nav-cta .btn {
-  padding: 12px 20px;
-  font-size: 0.9rem;
+  padding: 12px 16px;
+  font-size: 0.85rem;
   white-space: nowrap;
 }
 
@@ -2187,7 +2187,7 @@ td strong {
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1360px) {
   .main-nav { display: none; }
   .nav-toggle { display: flex; }
   .mobile-nav { display: block; }
