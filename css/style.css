@@ -2133,17 +2133,21 @@ td strong {
   cursor: pointer;
 }
 
+.map-dot .map-hit {
+  fill: #ffffff;
+  opacity: 0;
+}
+
 .map-dot .map-tip {
   opacity: 0;
-  transform: translateY(6px) scale(0.9);
-  transform-origin: bottom center;
-  transition: opacity var(--t-fast), transform var(--t-fast);
+  transform: translateY(5px);
+  transition: opacity 0.15s ease, transform 0.15s ease;
   pointer-events: none;
 }
 
 .map-dot:hover .map-tip {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
 }
 
 .map-dot:hover > circle {
