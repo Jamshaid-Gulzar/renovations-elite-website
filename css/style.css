@@ -1204,8 +1204,7 @@ p {
 
 .check-list strong {
   font-family: var(--font-heading);
-  display: block;
-  margin-bottom: 2px;
+  display: inline;
 }
 
 /* ==========================================================================
