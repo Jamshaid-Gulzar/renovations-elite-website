@@ -1288,6 +1288,12 @@ p {
   border-radius: var(--radius);
   border-left: 4px solid var(--gold);
   background: var(--gold-100);
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.notice:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
 }
 
 .notice--steel {
@@ -1965,6 +1971,12 @@ td strong {
   min-height: 320px;
   display: grid;
   place-items: center;
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.media:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(211, 162, 74, 0.35);
 }
 
 .media::before {
