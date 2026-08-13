@@ -2129,6 +2129,28 @@ td strong {
   padding: 12px 18px;
 }
 
+.map-dot {
+  cursor: pointer;
+}
+
+.map-dot .map-tip {
+  opacity: 0;
+  transform: translateY(6px) scale(0.9);
+  transform-origin: bottom center;
+  transition: opacity var(--t-fast), transform var(--t-fast);
+  pointer-events: none;
+}
+
+.map-dot:hover .map-tip {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.map-dot:hover > circle {
+  stroke: var(--gold);
+  stroke-width: 2;
+}
+
 /* CTA band */
 .cta-band {
   background: var(--charcoal);
