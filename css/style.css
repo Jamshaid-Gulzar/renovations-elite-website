@@ -1398,8 +1398,9 @@ p {
 
 /* Exclusion banner */
 .exclusion {
-  background: var(--warm-white);
-  border: 1px solid rgba(49, 91, 109, 0.3);
+  background: var(--gold-100);
+  border: 1px solid rgba(211, 162, 74, 0.45);
+  border-left: 4px solid var(--gold);
   border-radius: var(--radius);
   padding: 18px 22px;
   display: flex;
@@ -1412,14 +1413,14 @@ p {
 
 .exclusion:hover {
   transform: translateY(-3px);
-  box-shadow: var(--shadow-sm);
-  border-color: rgba(211, 162, 74, 0.55);
+  box-shadow: var(--shadow-md);
+  border-color: var(--gold);
 }
 
 .exclusion svg {
   width: 20px;
   height: 20px;
-  color: var(--steel);
+  color: var(--gold-600);
   flex-shrink: 0;
   margin-top: 2px;
 }
