@@ -349,6 +349,16 @@ p {
   position: relative;
 }
 
+.text-link svg {
+  width: 18px;
+  height: 18px;
+  transition: transform var(--t-fast);
+}
+
+.text-link:hover svg {
+  transform: translateX(4px);
+}
+
 .text-link::after {
   content: "";
   position: absolute;
@@ -1051,21 +1061,27 @@ p {
   border-color: rgba(211, 162, 74, 0.5);
 }
 
+.card:hover .card__icon {
+  background: var(--steel);
+  transform: scale(1.08) rotate(-4deg);
+}
+
 .card__icon {
-  width: 54px;
-  height: 54px;
-  border-radius: 14px;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
   display: grid;
   place-items: center;
   background: var(--charcoal);
   margin-bottom: var(--sp-4);
   color: var(--gold);
   box-shadow: var(--shadow-sm);
+  transition: background var(--t-med), transform var(--t-med);
 }
 
 .card__icon svg {
-  width: 26px;
-  height: 26px;
+  width: 24px;
+  height: 24px;
 }
 
 .card h3 {
@@ -1099,6 +1115,10 @@ p {
   background: var(--charcoal);
   position: relative;
   overflow: hidden;
+}
+
+.promise-strip .section-head h2 {
+  color: var(--warm-white);
 }
 
 .promise-strip::after {
@@ -1228,6 +1248,13 @@ p {
   display: grid;
   place-items: center;
   position: relative;
+  transition: background var(--t-med), transform var(--t-med), color var(--t-med);
+}
+
+.process-step:hover .process-step__num {
+  background: var(--steel);
+  color: var(--warm-white);
+  transform: rotate(-6deg) scale(1.08);
 }
 
 .process-step__num::after {
@@ -1313,8 +1340,35 @@ p {
   grid-template-columns: 260px 1fr auto;
   gap: 28px;
   align-items: center;
-  padding: 26px 0;
+  padding: 26px 18px;
   border-top: 1px solid rgba(23, 33, 43, 0.1);
+  border-radius: var(--radius);
+  position: relative;
+  transition: background var(--t-med), transform var(--t-med), box-shadow var(--t-med);
+}
+
+.service-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 16px;
+  bottom: 16px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--gold);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform var(--t-med);
+}
+
+.service-row:hover {
+  background: rgba(233, 238, 241, 0.7);
+  transform: translateX(6px);
+  box-shadow: var(--shadow-sm);
+}
+
+.service-row:hover::before {
+  transform: scaleY(1);
 }
 
 .service-row:last-child {
@@ -1925,10 +1979,15 @@ td strong {
 
 .media svg {
   position: relative;
-  width: 90px;
-  height: 90px;
+  width: 64px;
+  height: 64px;
   color: var(--gold);
   opacity: 0.85;
+  transition: transform var(--t-med);
+}
+
+.media:hover svg {
+  transform: scale(1.12);
 }
 
 .media .media__label {
