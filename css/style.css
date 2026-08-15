@@ -1087,6 +1087,28 @@ p {
   transition: transform var(--t-med), background var(--t-med);
 }
 
+.page-hero__img {
+  position: relative;
+  flex: 1;
+  min-height: 220px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(211, 162, 74, 0.25);
+}
+
+.page-hero__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--t-med);
+}
+
+.page-hero__media:hover .page-hero__img img {
+  transform: scale(1.04);
+}
+
 .page-hero__media:hover .page-hero__icon {
   transform: scale(1.08) rotate(-5deg);
   background: rgba(49, 91, 109, 0.45);
@@ -1552,6 +1574,60 @@ p {
   font-size: 0.82rem;
   font-weight: 600;
   padding: 10px 14px;
+}
+
+/* Before / after project comparison */
+.ba-compare {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 34px;
+}
+
+.ba-compare__item {
+  position: relative;
+  margin: 0;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  aspect-ratio: 4 / 3;
+  transition: transform var(--t-med), box-shadow var(--t-med);
+}
+
+.ba-compare__item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg), 0 0 0 1px rgba(211, 162, 74, 0.35);
+}
+
+.ba-compare__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--t-med);
+}
+
+.ba-compare__item:hover img {
+  transform: scale(1.04);
+}
+
+.ba-compare__tag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: var(--charcoal);
+  color: var(--warm-white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+
+.ba-compare__item:nth-child(2) .ba-compare__tag {
+  background: var(--gold);
+  color: var(--charcoal);
 }
 
 table {
@@ -2362,6 +2438,7 @@ td strong {
   .hero__bldg { height: 180px; }
   .hero__img { min-height: 180px; }
   .svc-gallery { grid-template-columns: 1fr; }
+  .ba-compare { grid-template-columns: 1fr; }
   .table-wrap { overflow-x: visible; }
   table { min-width: 0; }
   thead { display: none; }
