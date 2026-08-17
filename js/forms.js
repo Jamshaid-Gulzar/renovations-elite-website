@@ -192,7 +192,7 @@
           }
         });
 
-        var payload = Object.assign({}, data, { _subject: "Website submission — " + formType });
+        var payload = Object.assign({}, data, { _subject: "Website submission — " + formType, _captcha: "false", _template: "table" });
         var fd = new FormData();
         Object.keys(payload).forEach(function (key) { fd.append(key, payload[key]); });
         Array.prototype.forEach.call(form.querySelectorAll('input[type="file"]'), function (fileInput) {
@@ -202,12 +202,17 @@
         fetch(endpoint, { method: "POST", body: fd })
           .then(function (res) {
             if (!res.ok) throw new Error("Request failed: " + res.status);
+            return res.json();
+          })
+          .then(function (json) {
+            if (json.success === "false") throw new Error(json.message || "FormSubmit rejected");
             track(formType === "referral" ? "project_referral_submit" : "partnership_form_submit", {
               form: formType
             });
             showSuccess(form);
           })
-          .catch(function () {
+          .catch(function (err) {
+            console.error("Form submit error:", err);
             showFormError(form);
             if (submitBtn) {
               submitBtn.disabled = false;
