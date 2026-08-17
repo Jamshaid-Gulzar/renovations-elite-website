@@ -88,6 +88,7 @@
 
   function validateForm(form) {
     var ok = true;
+    var MAX_FILE_SIZE = 25 * 1024 * 1024;
     form.querySelectorAll("[required]").forEach(function (field) {
       var valid = true;
       if (field.type === "checkbox" || field.type === "radio") {
@@ -99,6 +100,14 @@
         valid = field.value.trim().length >= 7;
       } else if (field.type === "file") {
         valid = field.files.length > 0;
+        if (valid) {
+          var totalSize = 0;
+          Array.prototype.forEach.call(field.files, function (f) { totalSize += f.size; });
+          if (totalSize > MAX_FILE_SIZE) {
+            setError(field, "Total file size must be under 25 MB.");
+            valid = false;
+          }
+        }
       } else {
         valid = field.value.trim().length > 0;
       }
