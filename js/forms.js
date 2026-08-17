@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var FORM_ENDPOINT = "https://formsubmit.co/ajax/service@renovationselitellc.com,jamshaidgulzar9@gmail.com";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/service@renovationselitellc.com";
 
   function track(event, params) {
     try {
