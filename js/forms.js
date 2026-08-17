@@ -236,5 +236,26 @@
   document.addEventListener("DOMContentLoaded", function () {
     initFileUploads();
     initForms();
+
+    if (window.location.search.indexOf("success=1") !== -1) {
+      var forms = document.querySelectorAll(".form-card form");
+      forms.forEach(function (form) {
+        var card = form.closest(".form-card");
+        if (card) {
+          form.style.display = "none";
+          var existing = card.querySelector(".form-success.is-visible");
+          if (!existing) {
+            var div = document.createElement("div");
+            div.className = "form-success is-visible";
+            div.innerHTML =
+              '<div class="form-success__icon"><svg aria-hidden="true"><use href="#i-check-circle"/></svg></div>' +
+              '<h3>Thank You</h3>' +
+              '<p>Your submission has been received. A Renovations Elite representative will review it and follow up using the contact details provided.</p>';
+            card.appendChild(div);
+          }
+        }
+      });
+      window.history.replaceState({}, "", window.location.pathname);
+    }
   });
 })();
