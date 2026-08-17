@@ -2177,6 +2177,22 @@ td strong {
   max-width: 760px;
 }
 
+.page-gutter h2 {
+  font-size: 1.3rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.6rem;
+  color: var(--charcoal);
+}
+
+.page-gutter h2:first-child {
+  margin-top: 0;
+}
+
+.page-gutter p {
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
 .two-col {
   display: grid;
   grid-template-columns: 1fr 1fr;
