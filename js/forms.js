@@ -111,8 +111,16 @@
     });
 
     if (!ok) {
-      var firstError = form.querySelector(".has-error input, .has-error select, .has-error textarea");
-      if (firstError) firstError.focus();
+      var banner = form.querySelector(".form-validation-banner");
+      if (!banner) {
+        banner = document.createElement("div");
+        banner.className = "form-validation-banner";
+        banner.setAttribute("role", "alert");
+        banner.style.cssText = "background:#fdf3f2;border:2px solid #b0413e;color:#b0413e;padding:14px 18px;border-radius:8px;margin-bottom:18px;font-weight:600;font-size:0.95rem;";
+        form.insertBefore(banner, form.firstChild);
+      }
+      banner.textContent = "Please fill in all required fields before submitting.";
+      banner.scrollIntoView({ behavior: "smooth", block: "center" });
     }
     return ok;
   }
