@@ -34,11 +34,15 @@
           remove.setAttribute("aria-label", "Remove " + file.name);
           remove.textContent = "\u00d7";
           remove.addEventListener("click", function () {
-            var dt = new DataTransfer();
-            Array.prototype.forEach.call(input.files, function (f, j) {
-              if (j !== i) dt.items.add(f);
-            });
-            input.files = dt.files;
+            try {
+              var dt = new DataTransfer();
+              Array.prototype.forEach.call(input.files, function (f, j) {
+                if (j !== i) dt.items.add(f);
+              });
+              input.files = dt.files;
+            } catch (e) {
+              input.value = "";
+            }
             showFiles();
           });
           chip.appendChild(remove);

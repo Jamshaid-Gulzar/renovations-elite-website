@@ -139,6 +139,14 @@
         document.body.style.overflow = "";
       }
     });
+
+    document.addEventListener("click", function (e) {
+      if (panel.classList.contains("is-open") && !panel.contains(e.target) && !toggle.contains(e.target)) {
+        toggle.setAttribute("aria-expanded", "false");
+        panel.classList.remove("is-open");
+        document.body.style.overflow = "";
+      }
+    });
   }
 
   /* ------------------------------------------------------------------------
