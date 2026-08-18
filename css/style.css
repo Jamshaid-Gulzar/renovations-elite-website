@@ -2167,7 +2167,10 @@ td strong {
 
 .sticky-actions .btn {
   flex: 1;
-  padding: 13px 12px;
+  padding: 9px 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  min-height: 40px;
 }
 
 /* ==========================================================================
