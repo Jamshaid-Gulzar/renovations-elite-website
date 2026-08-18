@@ -2452,7 +2452,8 @@ td strong {
   .form-grid .full { grid-column: 1; }
   .footer-grid { grid-template-columns: 1fr; gap: 28px; }
   .sticky-actions { display: flex; }
-  .footer-bottom { flex-direction: column; justify-content: center; text-align: center; }
+  body { padding-bottom: 60px; }
+  .footer-bottom { flex-direction: column; justify-content: center; text-align: center; padding-bottom: 12px; }
   .btn-group .btn { width: 100%; }
   .hero__frame { min-height: 260px; }
   .hero__bldg { height: 180px; }
@@ -2489,4 +2490,5 @@ td strong {
 
 @media (min-width: 641px) {
   .sticky-actions { display: none !important; }
+  body { padding-bottom: 0; }
 }
